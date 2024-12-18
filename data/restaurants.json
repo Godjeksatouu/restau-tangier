@@ -18,7 +18,7 @@
             "telephone": "+212 5 39 33 57 89",
             "email": "reservation@lalanterne.ma",
             "type_cuisine": "Cuisine méditerranéenne",
-            "photo": "https://example.com/lalanterne.jpg", 
+            "photo": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/23/64/b9/45/lights-colors.jpg?w=600&h=-1&s=1", 
             "note_moyenne": 4.5,
             "site_web": "www.lalanterne-tanger.com"
         },
@@ -29,7 +29,7 @@
             "telephone": "+212 5 39 94 25 30",
             "email": "info@dardada.ma",
             "type_cuisine": "Cuisine marocaine authentique",
-            "photo": "https://example.com/dardada.jpg",
+            "photo": "https://media-cdn.tripadvisor.com/media/photo-s/1a/26/89/c0/dar-dada.jpg",
             "note_moyenne": 4.8,
             "site_web": "www.dardada-restaurant.com"
         },
@@ -40,7 +40,7 @@
             "telephone": "+212 5 39 32 45 67",
             "email": "contact@carlotta.ma",
             "type_cuisine": "Cuisine internationale fusion",
-            "photo": "https://example.com/carlotta.jpg",
+            "photo": "https://www.bigmammagroup.com/admin/wp-content/uploads/2023/05/Optimized-Carlotta-Ground-Floor-Credit-Jerome-Galland.jpg",
             "note_moyenne": 4.4,
             "site_web": "www.restaurantcarlotta.ma"
         },
@@ -51,7 +51,7 @@
             "telephone": "+212 5 39 93 22 11",
             "email": "reservation@cafehafa.ma",
             "type_cuisine": "Café traditionnel et cuisine légère",
-            "photo": "https://example.com/cafehafa.jpg",
+            "photo": "https://fr.le360.ma/resizer/b-jVhmGqlAxzcPR-RXGQQOhSdQ0=/arc-photo-le360/eu-central-1-prod/public/WIJG2EFZ7RF4TPPA7MW3PF37S4.jpg",
             "note_moyenne": 4.6,
             "site_web": null
         },
@@ -62,7 +62,7 @@
             "telephone": "+212 5 39 94 51 23",
             "email": "contact@saveurdpoisson.ma",
             "type_cuisine": "Fruits de mer et poissons",
-            "photo": "https://example.com/saveurdpoisson.jpg",
+            "photo": "https://d1bb1mccaihlpl.cloudfront.net/variants/9ua81j3kfh5ugizkc747ur7ezfly/9013f13587dd8661ba8afec2e753cfb4d81ef785d0a2ed63f5292f1f4cb21fb6",
             "note_moyenne": 4.9,
             "site_web": "www.saveurdupoisson.ma"
         },
@@ -73,7 +73,7 @@
             "telephone": "+212 5 39 32 66 77",
             "email": "reservation@marcopolo.ma",
             "type_cuisine": "Cuisine italienne",
-            "photo": "https://example.com/marcopolo.jpg",
+            "photo": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/298310615.jpg?k=9ac1aa1f15c7a050ff442979d9e5ab2721828990c33f518df0f741d5f0a09091&o=&hp=1",
             "note_moyenne": 4.3,
             "site_web": "www.marcopolo-restaurant.ma"
         },
@@ -84,7 +84,7 @@
             "telephone": "+212 5 39 93 55 44",
             "email": "contact@chezhassan.ma",
             "type_cuisine": "Cuisine berbère",
-            "photo": "https://example.com/chezhassan.jpg",
+            "photo": "https://img.restaurantguru.com/rfc3-Chez-Hassan-Bab-Kasbah-meals-2024-08.jpg",
             "note_moyenne": 4.6,
             "site_web": null
         },
@@ -95,7 +95,7 @@
             "telephone": "+212 5 39 32 88 99",
             "email": "reservation@lemirage.ma",
             "type_cuisine": "Cuisine marocaine contemporaine",
-            "photo": "https://example.com/lemirage.jpg",
+            "photo": "hhttps://lh6.googleusercontent.com/proxy/N708-4vUi41ginz_2GBG931TZ2NHsAp7Kag6Lv2Fd1P2uZtauZyoqkkghf-JqsED6eJifHCGRXRAu-xXeInBodSAhzIvwVyHlEKCvEkKXFgWAp8_B4OqI0YGSwoV8rKIUL2euiNEgJLZKHZEKiiIF_z672lNaMWz1kpS4abR",
             "note_moyenne": 4.5,
             "site_web": "www.restaurant-lemirage.ma"
         },
@@ -106,7 +106,7 @@
             "telephone": "+212 5 39 94 33 22",
             "email": "info@delicesdumaroc.ma",
             "type_cuisine": "Cuisine marocaine raffinée",
-            "photo": "https://example.com/delicesdumaroc.jpg",
+            "photo": "https://tb-static.uber.com/prod/image-proc/processed_images/d3cf284f1abbe82266f366a81b204fa1/fb86662148be855d931b37d6c1e5fcbe.jpeg",
             "note_moyenne": 4.7,
             "site_web": "www.delicesdumaroc.com"
         },
@@ -117,7 +117,7 @@
             "telephone": "+212 5 39 32 44 55",
             "email": "contact@lecomptoir.ma",
             "type_cuisine": "Cuisine française",
-            "photo": "https://example.com/lecomptoir.jpg",
+            "photo": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/da/ff/8c/dinner-at-alma.jpg?w=400&h=-1&s=1",
             "note_moyenne": 4.4,
             "site_web": "www.lecomptoir-tanger.ma"
         },
@@ -128,7 +128,7 @@
             "telephone": "+212 5 39 93 66 77",
             "email": "reservation@palaisdesdelices.ma",
             "type_cuisine": "Cuisine orientale",
-            "photo": "https://example.com/palaisdesdelices.jpg",
+            "photo": "https://img.restaurantguru.com/rce7-logo-Palais-Des-Delices-Chick-N-Crepes.jpg",
             "note_moyenne": 4.6,
             "site_web": null
         },
@@ -139,7 +139,7 @@
             "telephone": "+212 5 39 94 22 11",
             "email": "contact@latabledupecheur.ma",
             "type_cuisine": "Fruits de mer et grillades",
-            "photo": "https://example.com/latabledupecheur.jpg",
+            "photo": "https://img.restaurantguru.com/w550/h367/r0a5-Le-Pecheur-Restaurant-Tanger-food.jpg",
             "note_moyenne": 4.8,
             "site_web": "www.latabledupecheur.ma"
         },
@@ -150,7 +150,7 @@
             "telephone": "+212 5 39 32 55 66",
             "email": "reservation@lerif.ma",
             "type_cuisine": "Cuisine traditionnelle rifaine",
-            "photo": "https://example.com/lerif.jpg",
+            "photo": "https://instagram.ftng3-2.fna.fbcdn.net/v/t51.29350-15/350243194_662259989061618_4593009268873298707_n.jpg?stp=dst-jpg_e15_fr_s1080x1080_tt6&_nc_ht=instagram.ftng3-2.fna.fbcdn.net&_nc_cat=106&_nc_ohc=CZEEbAUUNqcQ7kNvgFUzdsV&_nc_gid=96023991c09b49fbb2748b2bb664278f&edm=ANTKIIoBAAAA&ccb=7-5&oh=00_AYCXgeobSavFtRh2s8MECpvVhCje54ffLxyM0heBR88zdA&oe=6768A6C1&_nc_sid=d885a2",
             "note_moyenne": 4.5,
             "site_web": null
         },
@@ -161,7 +161,7 @@
             "telephone": "+212 5 39 94 11 22",
             "email": "info@cuisinedelamer.ma",
             "type_cuisine": "Poissons et fruits de mer",
-            "photo": "https://example.com/cuisinedelamer.jpg",
+            "photo": "https://bonsplansmaroc.com/wp-content/uploads/2021/11/conception-site-monopage-2022-Recupere-2.jpg",
             "note_moyenne": 4.7,
             "site_web": "www.cuisinedelamer.com"
         }
