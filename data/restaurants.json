@@ -95,7 +95,7 @@
             "telephone": "+212 5 39 32 88 99",
             "email": "reservation@lemirage.ma",
             "type_cuisine": "Cuisine marocaine contemporaine",
-            "photo": "hhttps://lh6.googleusercontent.com/proxy/N708-4vUi41ginz_2GBG931TZ2NHsAp7Kag6Lv2Fd1P2uZtauZyoqkkghf-JqsED6eJifHCGRXRAu-xXeInBodSAhzIvwVyHlEKCvEkKXFgWAp8_B4OqI0YGSwoV8rKIUL2euiNEgJLZKHZEKiiIF_z672lNaMWz1kpS4abR",
+            "photo": "https://fastly.4sqi.net/img/general/600x600/464886155_EZ_eOEe-jRtQE1oZA_89D8qp4yDYpUeKq09rJmTqg80.jpg",
             "note_moyenne": 4.5,
             "site_web": "www.restaurant-lemirage.ma"
         },
@@ -145,12 +145,12 @@
         },
         {
             "id": 14,
-            "nom": "Restaurant Le Rif",
+            "nom": "Fairmont Tazi Palace",
             "adresse": "Place de France, Tanger 90000",
             "telephone": "+212 5 39 32 55 66",
             "email": "reservation@lerif.ma",
             "type_cuisine": "Cuisine traditionnelle rifaine",
-            "photo": "https://instagram.ftng3-2.fna.fbcdn.net/v/t51.29350-15/350243194_662259989061618_4593009268873298707_n.jpg?stp=dst-jpg_e15_fr_s1080x1080_tt6&_nc_ht=instagram.ftng3-2.fna.fbcdn.net&_nc_cat=106&_nc_ohc=CZEEbAUUNqcQ7kNvgFUzdsV&_nc_gid=96023991c09b49fbb2748b2bb664278f&edm=ANTKIIoBAAAA&ccb=7-5&oh=00_AYCXgeobSavFtRh2s8MECpvVhCje54ffLxyM0heBR88zdA&oe=6768A6C1&_nc_sid=d885a2",
+            "photo": "https://dq5r178u4t83b.cloudfront.net/wp-content/uploads/sites/186/2022/10/09140854/261_FairmontTazi_040123_7471_HD_RomeoBalancourt1.jpg",
             "note_moyenne": 4.5,
             "site_web": null
         },
@@ -164,6 +164,18 @@
             "photo": "https://bonsplansmaroc.com/wp-content/uploads/2021/11/conception-site-monopage-2022-Recupere-2.jpg",
             "note_moyenne": 4.7,
             "site_web": "www.cuisinedelamer.com"
+        },
+        {
+            "id": 16,
+            "nom": "Dar Al Maghrebia",
+            "adresse": "Rue de la Liberté, Tanger 90000",
+            "telephone": "+212 5 39 93 10 10",
+            "email": "contact@darmaghrebia.ma",
+            "type_cuisine": "Cuisine Marocaine",
+            "photo": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/e7/1d/2a/photo1jpg.jpg?w=900&h=500&s=1",
+            "note_moyenne": 4.8,
+            "site_web": "www.darmaghrebia.com"
         }
+        
     ]
 }
