@@ -64,8 +64,6 @@ Les informations des restaurants seront stockées dans un fichier JSON et utilis
 
 ```
 /blog-restaurants-tanger
-|-- /assets
-|   |-- /images
 |-- /data
 |   |-- restaurants.json
 |-- /src
