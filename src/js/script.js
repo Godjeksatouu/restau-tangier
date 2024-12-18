@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('/data/restaurants.json')
+    fetch('/restau-tangier/data/restaurants.json')
         .then(response => response.json())
         .then(data => {
             const container = document.getElementById('restaurant-container');
