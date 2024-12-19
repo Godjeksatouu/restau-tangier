@@ -1,6 +1,6 @@
 :root {
     --primary-color: #173d56;
-    --secondary-color: #98acb6;
+    --secondary-color: #749ca6;
     --third-color: #8c7a62;
     --fourth-color: #749ca6;
 }
@@ -220,7 +220,7 @@ body {
 
 h1 {
     text-align: center;
-    color: #2c3e50;
+    color: --fourth-color;
     margin-bottom: 30px;
 }
 
@@ -270,7 +270,7 @@ h1 {
 
 .card-content h3 {
     margin: 0 0 10px 0;
-    color: #2c3e50;
+    color:var(--secondary-color);
     font-size: 1.2em;
 }
 
@@ -295,8 +295,8 @@ h1 {
 }
 
 .details-btn {
-    background-color: #3498db;
-    color: white;
+    background-color:var(--primary-color);
+    color:var(--fourth-color);
     border: none;
     padding: 8px 15px;
     border-radius: 5px;
@@ -305,7 +305,8 @@ h1 {
 }
 
 .details-btn:hover {
-    background-color: #2980b9;
+    background-color:var(--third-color);
+    color: var(--primary-color);
 }
 
 .modal {
@@ -379,7 +380,7 @@ h1 {
 }
 
 .close-button {
-    color: #7f8c8d;
+    color: --fourth-color;
     font-size: 30px;
     font-weight: bold;
     position: absolute;
