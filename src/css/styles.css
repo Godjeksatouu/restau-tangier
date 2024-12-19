@@ -82,7 +82,21 @@ body {
     transition: transform 0.3s ease;
     z-index: -1;
 }
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 10px;
+}
 
+.controls input,
+.controls select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 30%;
+}
 .nav-links a:hover::before, .nav-links a.active::before {
     transform: scale(1);
 }
