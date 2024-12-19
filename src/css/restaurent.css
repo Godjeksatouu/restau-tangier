@@ -1,28 +1,63 @@
-/* Root variables for colors */
+/* Root variables for colors, dimensions, and animations */
 :root {
   --primary-color: #173d56;
   --secondary-color: #749ca6;
   --third-color: #8c7a62;
-  --fourth-color: #749ca6;
+  --fourth-color: #6a8e97;
   --background-color: #f4f4f4;
   --card-background-color: #ffffff;
   --highlight-color: #ffcc00;
   --text-color: #333;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --border-radius: 10px;
+  --transition-duration: 0.3s;
+  --font-family: "Manrope", sans-serif;
+  --base-font-size: 16px;
+  --animation-duration: 0.2s;
 }
 
 /* Global reset */
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  font-size: var(--base-font-size);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-family);
   line-height: 1.6;
-  color: var(--primary-color);
-  background-color: var(--secondary-color);
+  color: var(--text-color);
+  background-color: var(--background-color);
   overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: background var(--transition-duration) ease;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
 }
 
 /* Navbar styles */
@@ -32,30 +67,32 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  position: fixed;
+  position: sticky;
+  top: 0;
   width: 100%;
   z-index: 1000;
-  transition: all 0.3s ease;
+  transition: all var(--transition-duration) ease;
   backdrop-filter: blur(10px);
 }
 
 .navbar.scrolled {
   background: var(--fourth-color);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px var(--shadow-color);
 }
 
 .logo {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 800;
   text-decoration: none;
   display: flex;
   align-items: center;
+  color: var(--card-background-color);
 }
 
 .logo img {
-  height: 50px;
+  height: 35px;
   width: auto;
-  margin-right: 25px;
+  margin-right: 0.5rem;
 }
 
 .nav-links {
@@ -64,45 +101,48 @@ body {
 }
 
 .nav-links li {
-  margin: 0 1rem;
+  margin: 0 0.5rem;
 }
 
 .nav-links a {
-  color: var(--primary-color);
+  color: var(--card-background-color);
   text-decoration: none;
   font-weight: 600;
   padding: 0.5rem 1rem;
-  border-radius: 25px;
-  transition: all 0.3s ease;
+  border-radius: var(--border-radius);
+  transition: all var(--transition-duration) ease;
 }
 
-.nav-links a::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+.nav-links a:hover,
+.nav-links a:focus {
   background: var(--third-color);
-  border-radius: 25px;
-  transform: scale(0);
-  transition: transform 0.3s ease;
-  z-index: -1;
+  color: var(--card-background-color);
+  outline: none;
+  transform: translateY(-2px);
+}
+
+/* hamburger menu for smaller screens */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 1.5rem;
 }
 
 /* Main content container */
 .container {
-  margin-top: 100px; /* To make room for the fixed navbar */
+  flex-grow: 1;
+  margin-top: 50px;
   padding: 2rem;
-  background-color: var(--background-color);
-  border-radius: 10px;
-  max-width: 900px;
+  max-width: 1200px;
   margin: auto;
 }
 
 /* Restaurant name and details */
 #restaurant-name {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
   color: var(--primary-color);
   text-align: center;
@@ -112,18 +152,29 @@ body {
 #restaurant-details {
   background: var(--card-background-color);
   padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px var(--shadow-color);
+  animation: fadeIn var(--animation-duration) ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .detail-item {
   margin-bottom: 1.5rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .detail-item strong {
   color: var(--third-color);
   font-weight: bold;
+  display: block;
 }
 
 .detail-item span,
@@ -131,55 +182,125 @@ body {
   color: var(--text-color);
   font-weight: normal;
   display: block;
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
 }
 
 .detail-item a {
   color: var(--highlight-color);
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color var(--transition-duration) ease;
 }
 
-.detail-item a:hover {
+.detail-item a:hover,
+.detail-item a:focus {
   color: var(--primary-color);
 }
 
-/* Button styles (if needed) */
+/* Button styles */
 .details-btn {
-  padding: 0.8rem 1.5rem;
+  padding: 0.75rem 1.5rem;
   background-color: var(--highlight-color);
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: var(--border-radius);
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all var(--transition-duration) ease;
 }
 
-.details-btn:hover {
+.details-btn:hover,
+.details-btn:focus {
   background-color: var(--primary-color);
+  outline: none;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.card-image-container img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+  transition: transform var(--transition-duration) ease;
+}
+
+.card-image-container img:hover {
+  transform: scale(1.05);
+}
+
+/* Footer styles */
+footer {
+  background: var(--secondary-color);
+  color: var(--card-background-color);
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+/* Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
   }
 
-  .logo img {
-    height: 50px;
+  .logo {
+    margin-bottom: 0.5rem;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 0.25rem 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links a {
+    padding: 0.5rem;
+    width: 100%;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .container {
+    margin-top: 60px;
   }
 
   #restaurant-name {
-    font-size: 2rem;
-  }
-
-  #restaurant-details {
-    padding: 1rem;
+    font-size: 1.5rem;
   }
 
   .detail-item {
-    font-size: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .details-btn {
+    width: 100%;
   }
 }

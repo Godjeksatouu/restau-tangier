@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     restaurantDetails.innerHTML = `
       <div class="detail-item">
                 <strong>${restaurant.nom}:</strong>
-                <span>${restaurant.type_cuisine}</span>
+                <img src=${restaurant.photo}>
             </div>
             <div class="detail-item">
                 <strong>Type de cuisine:</strong> 

@@ -5,27 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Détails du Restaurant</title>
     <link rel="stylesheet" href="/restau-tangier/src/css/restaurent.css" />
+    <link rel="preload" href="/restau-tangier/imgs/logo.png" as="image" />
+    <link rel="preload" href="/restau-tangier/imgs/restaurant.jpg" as="image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
-      <nav class="navbar">
-        <div class="logo"><img src="/restau-tangier/imgs/logo.png" /></div>
+      <nav class="navbar" id="top">
+        <div class="logo">
+          <img src="/restau-tangier/imgs/logo.png" alt="Logo du restaurant" />
+        </div>
+        <button class="hamburger" aria-label="Menu" onclick="toggleMenu()">
+          &#9776;
+        </button>
         <ul class="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Admin </a></li>
-          <li><a href="#">Top restaurents</a></li>
+          <li><a href="/restau-tangier/index.html">Accueil</a></li>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="/restau-tangier/admin.html">Admin</a></li>
+          <li><a href="#top-restaurants">Meilleurs restaurants</a></li>
         </ul>
       </nav>
     </header>
 
-    <div class="container">
-      <h1 id="restaurant-name"></h1>
-      <div id="restaurant-details">
-        <!-- Les détails du restaurant seront affichés ici -->
-      </div>
-    </div>
+    <main class="container" id="home" tabindex="-1">
+      <h1 id="restaurant-name">Nom du Restaurant</h1>
+      <section id="restaurant-details">
+        <div class="detail-item">
+          <strong>Adresse</strong>
+          <span>123 Rue des Gourmets, Tangier</span>
+        </div>
+        <div class="detail-item">
+          <strong>Téléphone</strong>
+          <span><a href="tel:+212123456789">+212 123 456 789</a></span>
+        </div>
+        <div class="detail-item">
+          <strong>Email</strong>
+          <span
+            ><a href="mailto:contact@restaurant.com"
+              >contact@restaurant.com</a
+            ></span
+          >
+        </div>
+        <div class="card-image-container">
+          <img
+            src="/restau-tangier/imgs/restaurant.jpg"
+            alt="Image du restaurant"
+          />
+        </div>
+        <button class="details-btn">Réserver une table</button>
+      </section>
+    </main>
 
-    <script src="/restau-tangier/src/js/restaurents.js"></script>
+    <footer>
+      <p>© 2024 Restaurant Tangier. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        document.querySelector(".nav-links").classList.toggle("active");
+      }
+    </script>
+    <script src="/restau-tangier/src/js/restaurents.js" defer></script>
   </body>
 </html>
