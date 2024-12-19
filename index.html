@@ -4,9 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurants de Tanger</title>
+    <!--link css-->
     <link rel="stylesheet" href="/restau-tangier/src/css/styles.css">
+    <!--link fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;600;700;800&display=swap" rel="stylesheet">
+</head>
 </head>
 <body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><img src="/restau-tangier/imgs/logo.png"    ></div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="animate-text" data-text="Welcome to the Future">Welcome to<span class="highlight"> Tanger</span></h1>
+            <p>"Experience Flavorful Innovation: Tangier's Top Restaurants"</p>
+            <a href="#" class="cta-button">Discover More</a>
+        </div>
+        <div class="scroll-down">
+            <span></span>
+            Scroll Down
+        </div>
+    </section>
+
+    
     <div class="container">
         <h1>Restaurants de Tanger</h1>
         <div id="restaurant-container" class="restaurant-grid">
@@ -20,7 +49,6 @@
             <div id="modal-details"></div>
         </div>
     </div>
-
     <script src="/restau-tangier/src/js/script.js"></script>
 </body>
 </html>
