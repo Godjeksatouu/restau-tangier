@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("/restau-tangier/data/restaurants.json")
+  fetch("http://localhost:3000/api/restaurants", { mode: "no-cors" })
     .then((response) => response.json())
     .then((data) => {
       const container = document.getElementById("restaurant-container");
@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
       data.restaurants.forEach((restaurant) => {
         const card = document.createElement("div");
         card.classList.add("restaurant-card");
-
         card.innerHTML = `
                     <div class="card-image-container">
                         <img src="${restaurant.photo}" alt="${restaurant.nom}">

@@ -1,417 +1,429 @@
 :root {
-    --primary-color: #173d56;
-    --secondary-color: #749ca6;
-    --third-color: #8c7a62;
-    --fourth-color: #749ca6;
+  --primary-color: #173d56;
+  --secondary-color: #749ca6;
+  --third-color: #8c7a62;
+  --fourth-color: #749ca6;
 }
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Manrope', sans-serif;
-    line-height: 1.6;
-    color: var(--primary-color);
-    overflow-x: hidden;
-    background-color: var(--secondary-color);
+  font-family: "Manrope", sans-serif;
+  line-height: 1.6;
+  color: var(--primary-color);
+  overflow-x: hidden;
+  background-color: var(--secondary-color);
 }
 
 .navbar {
-    background: var(--secondary-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
+  background: var(--secondary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
 }
 
 .navbar.scrolled {
-    background: var(--fourth-color);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background: var(--fourth-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 .logo {
-    font-size: 1.7rem;
-    font-weight: 800;
-    text-decoration: none;
-    transition: transform 0.3s ease;
-    display: flex;
-    align-items: center;
+  font-size: 1.7rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
 }
 
 .logo img {
-    height:  70px;
-    width: auto; 
-    margin: right 25px; 
+  height: 70px;
+  width: auto;
+  margin: right 25px;
 }
 
 .nav-links {
-    display: flex;
-    list-style: none;
+  display: flex;
+  list-style: none;
 }
 
 .nav-links li {
-    margin: 0 1rem;
+  margin: 0 1rem;
 }
 
 .nav-links a {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 600;
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
-    transition: all 0.3s ease;
-    position: relative;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 .nav-links a::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: var(--third-color);
-    border-radius: 25px;
-    transform: scale(0);
-    transition: transform 0.3s ease;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: var(--third-color);
+  border-radius: 25px;
+  transform: scale(0);
+  transition: transform 0.3s ease;
+  z-index: -1;
 }
 .controls {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    gap: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 10px;
 }
 
 .controls input,
 .controls select {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 30%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 30%;
 }
-.nav-links a:hover::before, .nav-links a.active::before {
-    transform: scale(1);
+.nav-links a:hover::before,
+.nav-links a.active::before {
+  transform: scale(1);
 }
 
-.nav-links a:hover, .nav-links a.active {
-    color: var(--secondary-color);
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--secondary-color);
 }
 /* Hero Section Styling */
 .hero {
-    height: 100vh;
-    background: url('/restau-tangier/imgs/wallpaper.jpg') center/cover no-repeat fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+  height: 100vh;
+  background: url("/restau-tangier/imgs/wallpaper.jpg") center/cover no-repeat
+    fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
-    z-index: 1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.2)
+  );
+  z-index: 1;
 }
 
 .hero-content {
-    z-index: 2;
-    text-align: center;
-    color: white;
-    padding: 0 2rem;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  padding: 0 2rem;
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    font-weight: 800;
-    position: relative;
-    text-transform: uppercase;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  position: relative;
+  text-transform: uppercase;
 }
 
 .highlight {
-    color: var(--fourth-color);
+  color: var(--fourth-color);
 }
 
 .hero-content h1::after {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    color: var(--secondary-color);
-    filter: blur(10px);
-    opacity: 0.5;
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  color: var(--secondary-color);
+  filter: blur(10px);
+  opacity: 0.5;
 }
 
 .hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    font-weight: 300;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  font-weight: 300;
 }
 
 .cta-button {
-    display: inline-block;
-    padding: 10px 30px;
-    background-color: transparent;
-    color:var(--third-color);
-    text-decoration: none;
-    border: 2px solid --third-color;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-    font-weight: 600;
-    position: relative;
-    overflow: hidden;
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: transparent;
+  color: var(--third-color);
+  text-decoration: none;
+  border: 2px solid --third-color;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
 }
 
 .cta-button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--third-color);
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s ease;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--third-color);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+  z-index: -1;
 }
 
 .cta-button:hover::before {
-    transform: scaleX(1);
-    transform-origin: left;
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .cta-button:hover {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 /* Scroll Down Indicator */
 .scroll-down {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    color:var(--fourth-color);
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    animation: fade 2s infinite;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--fourth-color);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: fade 2s infinite;
 }
 
 .scroll-down span {
-    display: block;
-    width: 30px;
-    height: 30px;
-    border: 2px solid --primary-color;
-    border-radius: 50%;
-    margin: 0 auto 10px;
-    opacity: 0.7;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 2px solid --primary-color;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  opacity: 0.7;
 }
 
 @keyframes fade {
-    0% { opacity: 0; }
-    50% { opacity: 1; }
-    100% { opacity: 0; }
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 h1 {
-    text-align: center;
-    color: --fourth-color;
-    margin-bottom: 30px;
+  text-align: center;
+  color: --fourth-color;
+  margin-bottom: 30px;
 }
 
 .restaurant-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
 }
 
 .restaurant-card {
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .restaurant-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .card-image-container {
-    height: 250px;
-    overflow: hidden;
+  height: 250px;
+  overflow: hidden;
 }
 
 .restaurant-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
 .restaurant-card:hover img {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .card-content {
-    padding: 15px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
+  padding: 15px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-content h3 {
-    margin: 0 0 10px 0;
-    color:var(--secondary-color);
-    font-size: 1.2em;
+  margin: 0 0 10px 0;
+  color: var(--secondary-color);
+  font-size: 1.2em;
 }
 
 .cuisine-type {
-    color: #7f8c8d;
-    margin-bottom: 10px;
+  color: #7f8c8d;
+  margin-bottom: 10px;
 }
 
 .card-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: auto;
-    padding-top: 10px;
-    border-top: 1px solid #ecf0f1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid #ecf0f1;
 }
 
 .rating {
-    margin-right: 30px;
-    color: #f39c12;
-    font-weight: bold;
+  margin-right: 30px;
+  color: #f39c12;
+  font-weight: bold;
 }
 
 .details-btn {
-    background-color:var(--primary-color);
-    color:var(--fourth-color);
-    border: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  background-color: var(--primary-color);
+  color: var(--fourth-color);
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .details-btn:hover {
-    background-color:var(--third-color);
-    color: var(--primary-color);
+  background-color: var(--third-color);
+  color: var(--primary-color);
 }
 
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.5);
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal.show {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal-content {
-    background-color: white;
-    border-radius: 15px;
-    width: 500px;
-    max-width: 500px;
-    max-height: 80vh;
-    overflow-y: auto;
-    position: relative;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  background-color: white;
+  border-radius: 15px;
+  width: 500px;
+  max-width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    background-color: #f1f2f6;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #f1f2f6;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
-
 .modal-header h2 {
-    margin: 0;
-    color: #2c3e50;
+  margin: 0;
+  color: #2c3e50;
 }
 
 .modal-image-container {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
 }
 
 .modal-image-container img {
-    object-fit: cover;
+  object-fit: cover;
 }
 
 .modal-details-content {
-    padding: 20px;
+  padding: 20px;
 }
 
 .detail-item {
-    margin-bottom: 15px;
-    display: flex;
-    flex-direction: column;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
 }
 
 .detail-item strong {
-    margin-bottom: 5px;
-    color: #34495e;
+  margin-bottom: 5px;
+  color: #34495e;
 }
 
 .close-button {
-    color: --fourth-color;
-    font-size: 30px;
-    font-weight: bold;
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    cursor: pointer;
-    transition: color 0.3s ease;
+  color: --fourth-color;
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .close-button:hover {
-    color: #e74c3c;
+  color: #e74c3c;
 }
 
 .error-message {
-    text-align: center;
-    color: #e74c3c;
-    background-color: #f9e6e6;
-    padding: 20px;
-    border-radius: 10px;
+  text-align: center;
+  color: #e74c3c;
+  background-color: #f9e6e6;
+  padding: 20px;
+  border-radius: 10px;
 }
