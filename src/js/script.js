@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("http://localhost:3000/api/restaurants", { mode: "no-cors" })
+  fetch("http://localhost:3000/api/restaurants")
     .then((response) => response.json())
     .then((data) => {
       const container = document.getElementById("restaurant-container");
