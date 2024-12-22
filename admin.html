@@ -20,16 +20,13 @@
           Tangerestau
         </a>
         <nav class="nav">
-          <a href="#" class="nav-link">Accueil</a>
-          <a href="#restaurents_list" class="nav-link">Restaurants</a>
-          <a href="#" class="nav-link">À propos</a>
+          <a href="/index.html" class="nav-link">Accueil</a>
+          <a href="#Ajouter" class="nav-link">Ajoute un Restaurant</a>
+          <a href="#restaurents_list" class="nav-link">Restaurents</a>
           <a href="#" class="nav-link">Contact</a>
         </nav>
         <div class="auth-buttons">
           <input class="btn-outline" type="text" />
-          <button href="/restau-tangier/admin.html" class="btn btn-primary">
-            Admin
-          </button>
         </div>
       </div>
     </header>
@@ -45,6 +42,63 @@
         <span class="close-button">&times;</span>
         <div id="modal-details"></div>
       </div>
+    </div>
+    <div id="Ajouter" class="containerr">
+      <div class="text">Ajouter un Nouveau Restaurant</div>
+      <form action="#">
+        <div class="form-row">
+          <div class="input-data">
+            <input type="text" required />
+            <label for="">Nom</label>
+          </div>
+          <div class="input-data">
+            <input type="text" required />
+            <label for="">Adresse</label>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="input-data">
+            <input type="text" required />
+            <label for="">Telephone</label>
+          </div>
+          <div class="input-data">
+            <input type="email" required />
+            <label for="">Email</label>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="input-data">
+            <input type="text" required />
+            <label for="">Type de Cuisine</label>
+          </div>
+          <div class="input-data">
+            <input type="text" required />
+            <label for="">Note Moyenne</label>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="input-data">
+            <input type="text" required />
+            <label for="">Site Web</label>
+          </div>
+          <div class="input-data">
+            <h1 class="upload-icon">
+              <i class="fa fa-plus fa-2x" aria-hidden="true"></i>
+            </h1>
+            <input
+              class="file-uploader"
+              type="file"
+              onchange="upload()"
+              accept="image/*"
+            />
+          </div>
+        </div>
+        <div class="form-row submit-btn">
+          <div class="input-data">
+            <input type="submit" value="Submit" />
+          </div>
+        </div>
+      </form>
     </div>
     <footer>
       <div class="footer-content">
@@ -86,5 +140,6 @@
         <p>&copy; 2024 Tanger Restaurants Blog | All Rights Reserved</p>
       </div>
     </footer>
+    <script src="/src/js/admin.js"></script>
   </body>
 </html>

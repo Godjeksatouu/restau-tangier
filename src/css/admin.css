@@ -128,13 +128,264 @@ body {
 .btn-outline {
   background: transparent;
   border: 2px solid var(--primary);
-  color: var(--primary);
+  color: black;
+  height: 40px;
   border-radius: 25px;
 }
 
 .btn-outline:hover {
   background: var(--primary-light);
   transform: translateY(-2px);
+}
+.restaurant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 35px;
+  margin: 150px 100px;
+}
+
+.card-image-container img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 6px 8px var(--shadow-light);
+  transition: transform 0.4s ease;
+}
+
+.card-image-container img:hover {
+  transform: scale(1.05) rotate(1deg);
+}
+
+.card-content {
+  background-color: var(--light);
+  border: 1px solid var(--gray);
+  border-radius: 20px;
+  box-shadow: 0 8px 16px var(--shadow-medium);
+  padding: 15px;
+  text-align: left;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card-content:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 14px 28px var(--shadow-dark);
+}
+
+.card-content h3 {
+  color: var(--primary);
+  margin: 0 0 18px;
+  font-size: 1.8rem;
+}
+
+.cuisine-type {
+  color: var(--dark);
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.address {
+  color: var(--gray);
+  margin: 12px 0;
+  font-size: 1rem;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.rating {
+  color: var(--primary-dark);
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.details-btn {
+  background-color: var(--primary);
+  color: var(--light);
+  border: none;
+  padding: 15px 25px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, transform 0.4s ease;
+}
+
+.details-btn:hover {
+  background-color: var(--primary-dark);
+  transform: scale(1.15);
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: var(--light);
+  margin: 8% auto;
+  padding: 35px;
+  border: 1px solid var(--gray);
+  border-radius: 20px;
+  width: 70%;
+  max-width: 700px;
+  text-align: left;
+  box-shadow: 0 18px 30px var(--shadow-dark);
+}
+
+.close-button {
+  color: var(--dark);
+  float: right;
+  font-size: 34px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-button:hover {
+  color: var(--primary-dark);
+}
+.containerr {
+  max-width: 800px;
+  background: #fff;
+  width: 800px;
+  padding: 25px 40px 10px 40px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+.containerr .text {
+  text-align: center;
+  font-size: 41px;
+  font-weight: 600;
+  color: var(--primary-dark);
+}
+
+.containerr form {
+  padding: 30px 0 0 0;
+}
+
+.containerr form .form-row {
+  display: flex;
+  margin: 32px 0;
+}
+
+form .form-row .input-data {
+  width: 100%;
+  height: 40px;
+  margin: 0 20px;
+  position: relative;
+}
+
+form .form-row .textarea {
+  height: 70px;
+}
+
+.input-data input,
+.textarea textarea {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 17px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+}
+
+.input-data input:focus ~ label,
+.textarea textarea:focus ~ label,
+.input-data input:valid ~ label,
+.textarea textarea:valid ~ label {
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: #56d8e4;
+}
+
+.textarea textarea {
+  resize: none;
+  padding-top: 10px;
+}
+
+.input-data label {
+  position: absolute;
+  pointer-events: none;
+  bottom: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.textarea label {
+  width: 100%;
+  bottom: 40px;
+  background: #fff;
+}
+
+.input-data .underline {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+}
+
+.input-data .underline:before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: #56d8e4;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.input-data input:focus ~ .underline:before,
+.input-data input:valid ~ .underline:before,
+.textarea textarea:focus ~ .underline:before,
+.textarea textarea:valid ~ .underline:before {
+  transform: scale(1);
+}
+
+.submit-btn .input-data {
+  background-color: var(--primary-dark);
+  height: 45px !important;
+  width: 25% !important;
+}
+
+.submit-btn .input-data .inner {
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  background: -webkit-linear-gradient(right, #56d8e4, #9f01ea);
+  transition: all 0.4s;
+}
+
+.submit-btn .input-data:hover .inner {
+  left: 0;
+}
+
+.submit-btn .input-data input {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
 }
 footer {
   margin-top: 100px;
