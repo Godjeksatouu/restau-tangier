@@ -3,15 +3,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const restaurant = JSON.parse(localStorage.getItem("selectedRestaurant"));
 
   if (restaurant) {
-    const restaurantName = document.getElementById("restaurant-name");
     const restaurantDetails = document.getElementById("restaurant-details");
 
-    restaurantName.textContent = restaurant.nom;
-
     restaurantDetails.innerHTML = `
-      <div class="detail-item">
-                <strong>${restaurant.nom}:</strong>
+      <div class="detail-item-img">
                 <img src=${restaurant.photo}>
+            </div>
+            <div class="detail-item">
+                <strong>${restaurant.nom}</strong>
             </div>
             <div class="detail-item">
                 <strong>Type de cuisine:</strong> 

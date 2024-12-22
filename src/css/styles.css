@@ -129,6 +129,7 @@ body {
   background: transparent;
   border: 2px solid var(--primary);
   color: var(--primary);
+  border-radius: 25px;
 }
 
 .btn-outline:hover {
