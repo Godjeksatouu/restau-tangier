@@ -229,3 +229,138 @@ body {
   width: 100%;
   height: 80%;
 }
+.container {
+  text-align: center;
+  margin: 0 100px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px var(--shadow-medium);
+}
+
+h2 {
+  color: var(--primary-dark);
+  font-size: 2.6rem;
+  margin-bottom: 30px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.restaurant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 35px;
+  margin-top: 40px;
+}
+
+.card-image-container img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 6px 8px var(--shadow-light);
+  transition: transform 0.4s ease;
+}
+
+.card-image-container img:hover {
+  transform: scale(1.05) rotate(1deg);
+}
+
+.card-content {
+  background-color: var(--light);
+  border: 1px solid var(--gray);
+  border-radius: 20px;
+  box-shadow: 0 8px 16px var(--shadow-medium);
+  padding: 15px;
+  text-align: left;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card-content:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 14px 28px var(--shadow-dark);
+}
+
+.card-content h3 {
+  color: var(--primary);
+  margin: 0 0 18px;
+  font-size: 1.8rem;
+}
+
+.cuisine-type {
+  color: var(--dark);
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.address {
+  color: var(--gray);
+  margin: 12px 0;
+  font-size: 1rem;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.rating {
+  color: var(--primary-dark);
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.details-btn {
+  background-color: var(--primary);
+  color: var(--light);
+  border: none;
+  padding: 15px 25px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, transform 0.4s ease;
+}
+
+.details-btn:hover {
+  background-color: var(--primary-dark);
+  transform: scale(1.15);
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: var(--light);
+  margin: 8% auto;
+  padding: 35px;
+  border: 1px solid var(--gray);
+  border-radius: 20px;
+  width: 70%;
+  max-width: 700px;
+  text-align: left;
+  box-shadow: 0 18px 30px var(--shadow-dark);
+}
+
+.close-button {
+  color: var(--dark);
+  float: right;
+  font-size: 34px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-button:hover {
+  color: var(--primary-dark);
+}
