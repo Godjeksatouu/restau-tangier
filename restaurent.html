@@ -15,61 +15,69 @@
     />
   </head>
   <body>
-    <header>
-      <nav class="navbar" id="top">
-        <div class="logo">
-          <img src="/restau-tangier/imgs/logo.png" alt="Logo du restaurant" />
+    <header class="header">
+      <div class="header-content">
+        <a href="/restau-tangier/index.html" class="logo">
+          <span class="logo-icon">🍽️</span>
+          Tangerestau
+        </a>
+        <nav class="nav">
+          <a href="/restau-tangier/index.html" class="nav-link">Accueil</a>
+          <a href="#" class="nav-link">Restaurants</a>
+          <a href="#" class="nav-link">Admin</a>
+          <a href="#" class="nav-link">À propos</a>
+          <a href="#" class="nav-link">Contact</a>
+        </nav>
+        <div class="auth-buttons">
+          <button class="btn btn-outline">Se connecter</button>
+          <button class="btn btn-primary">S'inscrire</button>
         </div>
-        <button class="hamburger" aria-label="Menu" onclick="toggleMenu()">
-          &#9776;
-        </button>
-        <ul class="nav-links">
-          <li><a href="/restau-tangier/index.html">Accueil</a></li>
-          <li><a href="#about">À propos</a></li>
-          <li><a href="/restau-tangier/admin.html">Admin</a></li>
-          <li><a href="#top-restaurants">Meilleurs restaurants</a></li>
-        </ul>
-      </nav>
+      </div>
     </header>
-
-    <main class="container" id="home" tabindex="-1">
-      <h1 id="restaurant-name">Nom du Restaurant</h1>
-      <section id="restaurant-details">
-        <div class="detail-item">
-          <strong>Adresse</strong>
-          <span>123 Rue des Gourmets, Tangier</span>
-        </div>
-        <div class="detail-item">
-          <strong>Téléphone</strong>
-          <span><a href="tel:+212123456789">+212 123 456 789</a></span>
-        </div>
-        <div class="detail-item">
-          <strong>Email</strong>
-          <span
-            ><a href="mailto:contact@restaurant.com"
-              >contact@restaurant.com</a
-            ></span
-          >
-        </div>
-        <div class="card-image-container">
-          <img
-            src="/restau-tangier/imgs/restaurant.jpg"
-            alt="Image du restaurant"
-          />
-        </div>
-        <button class="details-btn">Réserver une table</button>
-      </section>
-    </main>
-
+    <div class="restaurant-details-container">
+      <h2 id="restaurant-name"></h2>
+      <div id="restaurant-details"></div>
+    </div>
     <footer>
-      <p>© 2024 Restaurant Tangier. Tous droits réservés.</p>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Popular Restaurants in Tangier</h3>
+          <ul>
+            <li><a href="#">Le Salon Bleu</a></li>
+            <li><a href="#">Dar Dada</a></li>
+            <li><a href="#">Café Hafa</a></li>
+            <li><a href="#">Le Saveur du Poisson</a></li>
+            <li><a href="#">Le Mirage</a></li>
+            <li><a href="#">ar Al Maghrebia</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <p>
+            Discover the best restaurants in Tangier and experience the local
+            flavors and unique atmosphere. Follow our blog for more tips and
+            reviews.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <ul>
+            <li>
+              <a href="mailto:info@tangerrestaurants.com"
+                ><span class="icon">📧</span> info@tangerrestaurants.com</a
+              >
+            </li>
+            <li><span class="icon">📞</span> +212 5 39 00 00 00</li>
+            <li>
+              <span class="icon">🏠</span> Rue Mohamed VI, Tangier, Morocco
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Tanger Restaurants Blog | All Rights Reserved</p>
+      </div>
     </footer>
-
-    <script>
-      function toggleMenu() {
-        document.querySelector(".nav-links").classList.toggle("active");
-      }
-    </script>
     <script src="/restau-tangier/src/js/restaurents.js" defer></script>
   </body>
 </html>
