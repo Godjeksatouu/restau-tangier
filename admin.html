@@ -3,7 +3,88 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="/src/css/admin.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Dashboard</title>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <a href="#" class="logo">
+          <span class="logo-icon">🍽️</span>
+          Tangerestau
+        </a>
+        <nav class="nav">
+          <a href="#" class="nav-link">Accueil</a>
+          <a href="#restaurents_list" class="nav-link">Restaurants</a>
+          <a href="#" class="nav-link">À propos</a>
+          <a href="#" class="nav-link">Contact</a>
+        </nav>
+        <div class="auth-buttons">
+          <input class="btn-outline" type="text" />
+          <button href="/restau-tangier/admin.html" class="btn btn-primary">
+            Admin
+          </button>
+        </div>
+      </div>
+    </header>
+    <div class="container" id="restaurents_list">
+      <h2>Restaurants de Tanger</h2>
+      <div id="restaurant-container" class="restaurant-grid">
+        <!-- Les cartes de restaurants seront générées dynamiquement par JavaScript -->
+      </div>
+    </div>
+
+    <div id="restaurant-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <div id="modal-details"></div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Popular Restaurants in Tangier</h3>
+          <ul>
+            <li><a href="#">Le Salon Bleu</a></li>
+            <li><a href="#">Dar Dada</a></li>
+            <li><a href="#">Café Hafa</a></li>
+            <li><a href="#">Le Saveur du Poisson</a></li>
+            <li><a href="#">Le Mirage</a></li>
+            <li><a href="#">ar Al Maghrebia</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <p>
+            Discover the best restaurants in Tangier and experience the local
+            flavors and unique atmosphere. Follow our blog for more tips and
+            reviews.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <ul>
+            <li>
+              <a href="mailto:info@tangerrestaurants.com"
+                ><span class="icon">📧</span> info@tangerrestaurants.com</a
+              >
+            </li>
+            <li><span class="icon">📞</span> +212 5 39 00 00 00</li>
+            <li>
+              <span class="icon">🏠</span> Rue Mohamed VI, Tangier, Morocco
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Tanger Restaurants Blog | All Rights Reserved</p>
+      </div>
+    </footer>
+  </body>
 </html>
