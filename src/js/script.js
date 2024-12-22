@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
           );
 
           // Rediriger vers la nouvelle page
-          window.location.href = "/restau-tangier/restaurent.html";
+          window.location.href = "/restaurent.html";
         });
       });
 
