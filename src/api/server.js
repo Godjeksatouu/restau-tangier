@@ -9,7 +9,7 @@ const PORT = 3000;
 app.use(cors());
 app.use(bodyParser.json());
 
-let restaurants = require("./restaurants.json"); // Fixed the spelling of 'restaurants'
+let restaurants = require("./restaurants.json");
 
 // Get all restaurants
 app.get("/api/restaurants", (req, res) => {
