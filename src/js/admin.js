@@ -12,25 +12,24 @@ document.addEventListener("DOMContentLoaded", () => {
         const card = document.createElement("div");
         card.classList.add("restaurant-card");
         card.innerHTML = `
-                      <div class="card-image-container">
-                          <img src="${restaurant.photo}" alt="${
-          restaurant.nom
-        }">
-                      </div>
-                      <div class="card-content">
-                          <h3>${restaurant.nom}</h3>
-                          <p class="cuisine-type">${restaurant.type_cuisine}</p>
-                          <p class="address">${restaurant.adresse}</p>
-                          <div class="card-footer">
-                              <span class="rating">★ ${restaurant.note_moyenne.toFixed(
-                                1
-                              )}/5</span>
-                              <button class="details-btn" data-id="${
-                                restaurant.id
-                              }">Détails</button>
-                          </div>
-                      </div>
-                  `;
+                    <div class="card-image-container">
+                        <img src="${restaurant.photo}" alt="${restaurant.nom}">
+                    </div>
+                    <div class="card-content">
+                        <h3>${restaurant.nom}</h3>
+                        <p class="cuisine-type">${restaurant.type_cuisine}</p>
+                        <p class="address">${restaurant.adresse}</p>
+                        <div class="card-footer">
+                            <span class="rating">★ ${restaurant.note_moyenne.toFixed(
+                              1
+                            )}/5</span>
+                            <button class="details-btn" data-id="${
+                              restaurant.id
+                            }">Détails</button>
+                            <button class="remove-btn" data-id="">Supprimer</button>
+                        </div>
+                    </div>
+                `;
 
         // Ajouter la carte au conteneur
         container.appendChild(card);
@@ -43,16 +42,16 @@ document.addEventListener("DOMContentLoaded", () => {
             (r) => r.id === parseInt(detailsButton.dataset.id)
           );
           modalDetails.innerHTML = `
-                          <h2>${restaurantDetails.nom}</h2>
-                          <p>${restaurantDetails.description}</p>
-                          <p>Adresse: ${restaurantDetails.adresse}</p>
-                          <p>Type de cuisine: ${
-                            restaurantDetails.type_cuisine
-                          }</p>
-                          <p>Note: ★ ${restaurantDetails.note_moyenne.toFixed(
-                            1
-                          )}/5</p>
-                      `;
+                        <h2>${restaurantDetails.nom}</h2>
+                        <p>${restaurantDetails.description}</p>
+                        <p>Adresse: ${restaurantDetails.adresse}</p>
+                        <p>Type de cuisine: ${
+                          restaurantDetails.type_cuisine
+                        }</p>
+                        <p>Note: ★ ${restaurantDetails.note_moyenne.toFixed(
+                          1
+                        )}/5</p>
+                    `;
           modal.style.display = "block";
         });
 
