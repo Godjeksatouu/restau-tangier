@@ -7,68 +7,84 @@ document.addEventListener("DOMContentLoaded", () => {
       const modalDetails = document.getElementById("modal-details");
       const closeButton = document.querySelector(".close-button");
 
-      // Créer des cartes pour chaque restaurant
-      data.restaurants.forEach((restaurant) => {
-        const card = document.createElement("div");
-        card.classList.add("restaurant-card");
-        card.innerHTML = `
-                    <div class="card-image-container">
-                        <img src="${restaurant.photo}" alt="${restaurant.nom}">
-                    </div>
-                    <div class="card-content">
-                        <h3>${restaurant.nom}</h3>
-                        <p class="cuisine-type">${restaurant.type_cuisine}</p>
-                        <p class="address">${restaurant.adresse}</p>
-                        <div class="card-footer">
-                            <span class="rating">★ ${restaurant.note_moyenne.toFixed(
-                              1
-                            )}/5</span>
-                            <button class="details-btn" data-id="${
-                              restaurant.id
-                            }">Détails</button>
-                            <button class="remove-btn" data-id="">Supprimer</button>
-                        </div>
-                    </div>
-                `;
+      // Function to display restaurants
+      function displayRestaurants(restaurants) {
+        container.innerHTML = ""; // Clear current restaurant cards
 
-        // Ajouter la carte au conteneur
-        container.appendChild(card);
+        restaurants.forEach((restaurant) => {
+          const card = document.createElement("div");
+          card.classList.add("restaurant-card");
+          card.innerHTML = `
+            <div class="card-image-container">
+              <img src="${restaurant.photo}" alt="${restaurant.nom}">
+            </div>
+            <div class="card-content">
+              <h3>${restaurant.nom}</h3>
+              <p class="cuisine-type">${restaurant.type_cuisine}</p>
+              <p class="address">${restaurant.adresse}</p>
+              <div class="card-footer">
+                <span class="rating">★ ${restaurant.note_moyenne.toFixed(
+                  1
+                )}/5</span>
+                <button class="details-btn" data-id="${
+                  restaurant.id
+                }">Détails</button>
+              </div>
+            </div>
+          `;
 
-        // Ajouter un événement au bouton Détails pour ouvrir le modal
-        const detailsButton = card.querySelector(".details-btn");
-        detailsButton.addEventListener("click", () => {
-          // Afficher les détails dans le modal
-          const restaurantDetails = data.restaurants.find(
-            (r) => r.id === parseInt(detailsButton.dataset.id)
+          container.appendChild(card);
+
+          const detailsButton = card.querySelector(".details-btn");
+          detailsButton.addEventListener("click", () => {
+            // Save restaurant details to localStorage
+            localStorage.setItem(
+              "selectedRestaurant",
+              JSON.stringify(restaurant)
+            );
+
+            // Redirect to the restaurant page
+            window.location.href = "/restaurent.html";
+
+            // Display details in the modal (if you want to show the modal)
+            const restaurantDetails = data.restaurants.find(
+              (r) => r.id === parseInt(detailsButton.dataset.id)
+            );
+            modalDetails.innerHTML = `
+              <h2>${restaurantDetails.nom}</h2>
+              <p>${restaurantDetails.description}</p>
+              <p>Adresse: ${restaurantDetails.adresse}</p>
+              <p>Type de cuisine: ${restaurantDetails.type_cuisine}</p>
+              <p>Note: ★ ${restaurantDetails.note_moyenne.toFixed(1)}/5</p>
+            `;
+            modal.style.display = "block";
+          });
+        });
+      }
+
+      // Initially display all restaurants
+      displayRestaurants(data.restaurants);
+
+      // Search function
+      window.searchRestaurants = function () {
+        const query = document
+          .getElementById("searchInput")
+          .value.toLowerCase();
+
+        // Filter the restaurants by nom or type_cuisine
+        const filteredRestaurants = data.restaurants.filter((restaurant) => {
+          return (
+            restaurant.nom.toLowerCase().includes(query) ||
+            restaurant.type_cuisine.toLowerCase().includes(query)
           );
-          modalDetails.innerHTML = `
-                        <h2>${restaurantDetails.nom}</h2>
-                        <p>${restaurantDetails.description}</p>
-                        <p>Adresse: ${restaurantDetails.adresse}</p>
-                        <p>Type de cuisine: ${
-                          restaurantDetails.type_cuisine
-                        }</p>
-                        <p>Note: ★ ${restaurantDetails.note_moyenne.toFixed(
-                          1
-                        )}/5</p>
-                    `;
-          modal.style.display = "block";
         });
 
-        // Ajouter un autre événement au bouton Détails pour rediriger vers la page restaurant.html
-        detailsButton.addEventListener("click", () => {
-          // Sauvegarder les détails du restaurant dans localStorage
-          localStorage.setItem(
-            "selectedRestaurant",
-            JSON.stringify(restaurant)
-          );
+        // Display filtered restaurants
+        displayRestaurants(filteredRestaurants);
+        container.scrollIntoView({ behavior: "smooth" });
+      };
 
-          // Rediriger vers la nouvelle page
-          window.location.href = "/restaurent.html";
-        });
-      });
-
-      // Fermer le modal lorsqu'on clique sur le bouton de fermeture
+      // Close the modal when the close button is clicked
       closeButton.addEventListener("click", () => {
         modal.style.display = "none";
       });
