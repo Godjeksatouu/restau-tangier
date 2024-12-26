@@ -16,9 +16,18 @@ app.get("/api/restaurants", (req, res) => {
   res.json(restaurants);
 });
 
+// Get a specific restaurant by ID
+app.get("/api/restaurants/:id", (req, res) => {
+  console.log(req.params.id);
+  const restaurant = restaurants.find((r) => r.id === parseInt(req.params.id));
+  if (!restaurant) {
+    return res.status(404).send("Restaurant not found");
+  }
+  res.json(restaurant);
+});
+
 // Add a restaurant
 app.post("/api/restaurants", (req, res) => {
-  // Fixed the endpoint
   const newRestaurant = { id: Date.now(), nom: req.body.nom };
   restaurants.push(newRestaurant);
   res.status(201).json(newRestaurant);
@@ -26,22 +35,20 @@ app.post("/api/restaurants", (req, res) => {
 
 // Update a restaurant
 app.put("/api/restaurants/:id", (req, res) => {
-  // Added ':id' to the endpoint
-  const restaurant = restaurants.find((r) => r.id === parseInt(req.params.id)); // Fixed the variable name
-  if (!restaurant) return res.status(404).send("Restaurant not found"); // Fixed the message
+  const restaurant = restaurants.find((r) => r.id === parseInt(req.params.id));
+  if (!restaurant) return res.status(404).send("Restaurant not found");
 
-  restaurant.nom = req.body.nom; // Updated the correct restaurant
-  res.json(restaurant); // Return the updated restaurant
+  restaurant.nom = req.body.nom;
+  res.json(restaurant);
 });
 
 // Delete a restaurant
 app.delete("/api/restaurants/:id", (req, res) => {
-  // Fixed the endpoint
-  const index = restaurants.findIndex((r) => r.id === parseInt(req.params.id)); // Fixed the variable name
-  if (index === -1) return res.status(404).send("Restaurant not found"); // Fixed the message
+  const index = restaurants.findIndex((r) => r.id === parseInt(req.params.id));
+  if (index === -1) return res.status(404).send("Restaurant not found");
 
   restaurants.splice(index, 1);
-  res.sendStatus(204); // No content
+  res.sendStatus(204);
 });
 
 app.listen(PORT, () => {

@@ -1,180 +1,178 @@
-{
-  "restaurants": [
-    {
-      "id": 1,
-      "nom": "Le Salon Bleu",
-      "adresse": "Rue Tienda, Kasbah, Tanger 90000",
-      "telephone": "+212 5 39 93 41 16",
-      "email": "contact@lesalonbleu.ma",
-      "type_cuisine": "Cuisine marocaine traditionnelle",
-      "photo": "https://scontent.ftng3-2.fna.fbcdn.net/v/t39.30808-6/298280619_5691766864201818_482751150668623082_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3a1ebe&_nc_eui2=AeGev4PagPD4hdhHKDZVEoWm2c0jcbK8shvZzSNxsryyG7SMxt4DniqZgV6oDjEyGpiHtZtOAa6fcBQKcxD8qEwR&_nc_ohc=mvhabzK-lIQQ7kNvgEyIA3B&_nc_zt=23&_nc_ht=scontent.ftng3-2.fna&_nc_gid=ADdAdhUViMcZON9hhPOhJZn&oh=00_AYDkLn16zTYQV-vhNQm5IwDnbzSxpmNRZG-AeHFoek79eg&oe=67687AA0",
-      "note_moyenne": 4.7,
-      "site_web": "www.lesalonbleu.ma"
-    },
-    {
-      "id": 2,
-      "nom": "Restaurant La Lanterne",
-      "adresse": "Place de France, Centre-ville, Tanger 90000",
-      "telephone": "+212 5 39 33 57 89",
-      "email": "reservation@lalanterne.ma",
-      "type_cuisine": "Cuisine méditerranéenne",
-      "photo": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/23/64/b9/45/lights-colors.jpg?w=600&h=-1&s=1",
-      "note_moyenne": 4.5,
-      "site_web": "www.lalanterne-tanger.com"
-    },
-    {
-      "id": 3,
-      "nom": "Dar Dada",
-      "adresse": "Rue Maarouf, Médina, Tanger 90000",
-      "telephone": "+212 5 39 94 25 30",
-      "email": "info@dardada.ma",
-      "type_cuisine": "Cuisine marocaine authentique",
-      "photo": "https://media-cdn.tripadvisor.com/media/photo-s/1a/26/89/c0/dar-dada.jpg",
-      "note_moyenne": 4.8,
-      "site_web": "www.dardada-restaurant.com"
-    },
-    {
-      "id": 4,
-      "nom": "Le Carlotta",
-      "adresse": "Boulevard Pasteur, Tanger 90000",
-      "telephone": "+212 5 39 32 45 67",
-      "email": "contact@carlotta.ma",
-      "type_cuisine": "Cuisine internationale fusion",
-      "photo": "https://www.bigmammagroup.com/admin/wp-content/uploads/2023/05/Optimized-Carlotta-Ground-Floor-Credit-Jerome-Galland.jpg",
-      "note_moyenne": 4.4,
-      "site_web": "www.restaurantcarlotta.ma"
-    },
-    {
-      "id": 5,
-      "nom": "Café Hafa",
-      "adresse": "Rue Hafa, Tanger 90000",
-      "telephone": "+212 5 39 93 22 11",
-      "email": "reservation@cafehafa.ma",
-      "type_cuisine": "Café traditionnel et cuisine légère",
-      "photo": "https://fr.le360.ma/resizer/b-jVhmGqlAxzcPR-RXGQQOhSdQ0=/arc-photo-le360/eu-central-1-prod/public/WIJG2EFZ7RF4TPPA7MW3PF37S4.jpg",
-      "note_moyenne": 4.6,
-      "site_web": null
-    },
-    {
-      "id": 6,
-      "nom": "Le Saveur du Poisson",
-      "adresse": "Rue Touila, Médina, Tanger 90000",
-      "telephone": "+212 5 39 94 51 23",
-      "email": "contact@saveurdpoisson.ma",
-      "type_cuisine": "Fruits de mer et poissons",
-      "photo": "https://d1bb1mccaihlpl.cloudfront.net/variants/9ua81j3kfh5ugizkc747ur7ezfly/9013f13587dd8661ba8afec2e753cfb4d81ef785d0a2ed63f5292f1f4cb21fb6",
-      "note_moyenne": 4.9,
-      "site_web": "www.saveurdupoisson.ma"
-    },
-    {
-      "id": 7,
-      "nom": "Restaurant Marco Polo",
-      "adresse": "Rue de la Liberté, Tanger 90000",
-      "telephone": "+212 5 39 32 66 77",
-      "email": "reservation@marcopolo.ma",
-      "type_cuisine": "Cuisine italienne",
-      "photo": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/298310615.jpg?k=9ac1aa1f15c7a050ff442979d9e5ab2721828990c33f518df0f741d5f0a09091&o=&hp=1",
-      "note_moyenne": 4.3,
-      "site_web": "www.marcopolo-restaurant.ma"
-    },
-    {
-      "id": 8,
-      "nom": "Chez Hassan",
-      "adresse": "Place du Séminaire, Médina, Tanger 90000",
-      "telephone": "+212 5 39 93 55 44",
-      "email": "contact@chezhassan.ma",
-      "type_cuisine": "Cuisine berbère",
-      "photo": "https://img.restaurantguru.com/rfc3-Chez-Hassan-Bab-Kasbah-meals-2024-08.jpg",
-      "note_moyenne": 4.6,
-      "site_web": null
-    },
-    {
-      "id": 9,
-      "nom": "Le Mirage",
-      "adresse": "Boulevard Mohammed V, Tanger 90000",
-      "telephone": "+212 5 39 32 88 99",
-      "email": "reservation@lemirage.ma",
-      "type_cuisine": "Cuisine marocaine contemporaine",
-      "photo": "https://fastly.4sqi.net/img/general/600x600/464886155_EZ_eOEe-jRtQE1oZA_89D8qp4yDYpUeKq09rJmTqg80.jpg",
-      "note_moyenne": 4.5,
-      "site_web": "www.restaurant-lemirage.ma"
-    },
-    {
-      "id": 10,
-      "nom": "Délices du Maroc",
-      "adresse": "Rue Salah Eddine El Ayoubi, Tanger 90000",
-      "telephone": "+212 5 39 94 33 22",
-      "email": "info@delicesdumaroc.ma",
-      "type_cuisine": "Cuisine marocaine raffinée",
-      "photo": "https://tb-static.uber.com/prod/image-proc/processed_images/d3cf284f1abbe82266f366a81b204fa1/fb86662148be855d931b37d6c1e5fcbe.jpeg",
-      "note_moyenne": 4.7,
-      "site_web": "www.delicesdumaroc.com"
-    },
-    {
-      "id": 11,
-      "nom": "Restaurant Le Comptoir",
-      "adresse": "Avenue Mohammed VI, Tanger 90000",
-      "telephone": "+212 5 39 32 44 55",
-      "email": "contact@lecomptoir.ma",
-      "type_cuisine": "Cuisine française",
-      "photo": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/da/ff/8c/dinner-at-alma.jpg?w=400&h=-1&s=1",
-      "note_moyenne": 4.4,
-      "site_web": "www.lecomptoir-tanger.ma"
-    },
-    {
-      "id": 12,
-      "nom": "Palais des Délices",
-      "adresse": "Rue Ibn Toumert, Tanger 90000",
-      "telephone": "+212 5 39 93 66 77",
-      "email": "reservation@palaisdesdelices.ma",
-      "type_cuisine": "Cuisine orientale",
-      "photo": "https://img.restaurantguru.com/rce7-logo-Palais-Des-Delices-Chick-N-Crepes.jpg",
-      "note_moyenne": 4.6,
-      "site_web": null
-    },
-    {
-      "id": 13,
-      "nom": "La Table du Pêcheur",
-      "adresse": "Port de Tanger, Tanger 90000",
-      "telephone": "+212 5 39 94 22 11",
-      "email": "contact@latabledupecheur.ma",
-      "type_cuisine": "Fruits de mer et grillades",
-      "photo": "https://img.restaurantguru.com/w550/h367/r0a5-Le-Pecheur-Restaurant-Tanger-food.jpg",
-      "note_moyenne": 4.8,
-      "site_web": "www.latabledupecheur.ma"
-    },
-    {
-      "id": 14,
-      "nom": "Fairmont Tazi Palace",
-      "adresse": "Place de France, Tanger 90000",
-      "telephone": "+212 5 39 32 55 66",
-      "email": "reservation@lerif.ma",
-      "type_cuisine": "Cuisine traditionnelle rifaine",
-      "photo": "https://dq5r178u4t83b.cloudfront.net/wp-content/uploads/sites/186/2022/10/09140854/261_FairmontTazi_040123_7471_HD_RomeoBalancourt1.jpg",
-      "note_moyenne": 4.5,
-      "site_web": null
-    },
-    {
-      "id": 15,
-      "nom": "Cuisine de la Mer",
-      "adresse": "Boulevard Moulay Rachid, Tanger 90000",
-      "telephone": "+212 5 39 94 11 22",
-      "email": "info@cuisinedelamer.ma",
-      "type_cuisine": "Poissons et fruits de mer",
-      "photo": "https://bonsplansmaroc.com/wp-content/uploads/2021/11/conception-site-monopage-2022-Recupere-2.jpg",
-      "note_moyenne": 4.7,
-      "site_web": "www.cuisinedelamer.com"
-    },
-    {
-      "id": 16,
-      "nom": "Dar Al Maghrebia",
-      "adresse": "Rue de la Liberté, Tanger 90000",
-      "telephone": "+212 5 39 93 10 10",
-      "email": "contact@darmaghrebia.ma",
-      "type_cuisine": "Cuisine Marocaine",
-      "photo": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/e7/1d/2a/photo1jpg.jpg?w=900&h=500&s=1",
-      "note_moyenne": 4.8,
-      "site_web": "www.darmaghrebia.com"
-    }
-  ]
-}
+[
+  {
+    "id": 1,
+    "nom": "Le Salon Bleu",
+    "adresse": "Rue Tienda, Kasbah, Tanger 90000",
+    "telephone": "+212 5 39 93 41 16",
+    "email": "contact@lesalonbleu.ma",
+    "type_cuisine": "Cuisine marocaine traditionnelle",
+    "photo": "https://scontent.ftng3-2.fna.fbcdn.net/v/t39.30808-6/298280619_5691766864201818_482751150668623082_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3a1ebe&_nc_eui2=AeGev4PagPD4hdhHKDZVEoWm2c0jcbK8shvZzSNxsryyG7SMxt4DniqZgV6oDjEyGpiHtZtOAa6fcBQKcxD8qEwR&_nc_ohc=mvhabzK-lIQQ7kNvgEyIA3B&_nc_zt=23&_nc_ht=scontent.ftng3-2.fna&_nc_gid=ADdAdhUViMcZON9hhPOhJZn&oh=00_AYDkLn16zTYQV-vhNQm5IwDnbzSxpmNRZG-AeHFoek79eg&oe=67687AA0",
+    "note_moyenne": 4.7,
+    "site_web": "www.lesalonbleu.ma"
+  },
+  {
+    "id": 2,
+    "nom": "Restaurant La Lanterne",
+    "adresse": "Place de France, Centre-ville, Tanger 90000",
+    "telephone": "+212 5 39 33 57 89",
+    "email": "reservation@lalanterne.ma",
+    "type_cuisine": "Cuisine méditerranéenne",
+    "photo": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/23/64/b9/45/lights-colors.jpg?w=600&h=-1&s=1",
+    "note_moyenne": 4.5,
+    "site_web": "www.lalanterne-tanger.com"
+  },
+  {
+    "id": 3,
+    "nom": "Dar Dada",
+    "adresse": "Rue Maarouf, Médina, Tanger 90000",
+    "telephone": "+212 5 39 94 25 30",
+    "email": "info@dardada.ma",
+    "type_cuisine": "Cuisine marocaine authentique",
+    "photo": "https://media-cdn.tripadvisor.com/media/photo-s/1a/26/89/c0/dar-dada.jpg",
+    "note_moyenne": 4.8,
+    "site_web": "www.dardada-restaurant.com"
+  },
+  {
+    "id": 4,
+    "nom": "Le Carlotta",
+    "adresse": "Boulevard Pasteur, Tanger 90000",
+    "telephone": "+212 5 39 32 45 67",
+    "email": "contact@carlotta.ma",
+    "type_cuisine": "Cuisine internationale fusion",
+    "photo": "https://www.bigmammagroup.com/admin/wp-content/uploads/2023/05/Optimized-Carlotta-Ground-Floor-Credit-Jerome-Galland.jpg",
+    "note_moyenne": 4.4,
+    "site_web": "www.restaurantcarlotta.ma"
+  },
+  {
+    "id": 5,
+    "nom": "Café Hafa",
+    "adresse": "Rue Hafa, Tanger 90000",
+    "telephone": "+212 5 39 93 22 11",
+    "email": "reservation@cafehafa.ma",
+    "type_cuisine": "Café traditionnel et cuisine légère",
+    "photo": "https://fr.le360.ma/resizer/b-jVhmGqlAxzcPR-RXGQQOhSdQ0=/arc-photo-le360/eu-central-1-prod/public/WIJG2EFZ7RF4TPPA7MW3PF37S4.jpg",
+    "note_moyenne": 4.6,
+    "site_web": null
+  },
+  {
+    "id": 6,
+    "nom": "Le Saveur du Poisson",
+    "adresse": "Rue Touila, Médina, Tanger 90000",
+    "telephone": "+212 5 39 94 51 23",
+    "email": "contact@saveurdpoisson.ma",
+    "type_cuisine": "Fruits de mer et poissons",
+    "photo": "https://d1bb1mccaihlpl.cloudfront.net/variants/9ua81j3kfh5ugizkc747ur7ezfly/9013f13587dd8661ba8afec2e753cfb4d81ef785d0a2ed63f5292f1f4cb21fb6",
+    "note_moyenne": 4.9,
+    "site_web": "www.saveurdupoisson.ma"
+  },
+  {
+    "id": 7,
+    "nom": "Restaurant Marco Polo",
+    "adresse": "Rue de la Liberté, Tanger 90000",
+    "telephone": "+212 5 39 32 66 77",
+    "email": "reservation@marcopolo.ma",
+    "type_cuisine": "Cuisine italienne",
+    "photo": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/298310615.jpg?k=9ac1aa1f15c7a050ff442979d9e5ab2721828990c33f518df0f741d5f0a09091&o=&hp=1",
+    "note_moyenne": 4.3,
+    "site_web": "www.marcopolo-restaurant.ma"
+  },
+  {
+    "id": 8,
+    "nom": "Chez Hassan",
+    "adresse": "Place du Séminaire, Médina, Tanger 90000",
+    "telephone": "+212 5 39 93 55 44",
+    "email": "contact@chezhassan.ma",
+    "type_cuisine": "Cuisine berbère",
+    "photo": "https://img.restaurantguru.com/rfc3-Chez-Hassan-Bab-Kasbah-meals-2024-08.jpg",
+    "note_moyenne": 4.6,
+    "site_web": null
+  },
+  {
+    "id": 9,
+    "nom": "Le Mirage",
+    "adresse": "Boulevard Mohammed V, Tanger 90000",
+    "telephone": "+212 5 39 32 88 99",
+    "email": "reservation@lemirage.ma",
+    "type_cuisine": "Cuisine marocaine contemporaine",
+    "photo": "https://fastly.4sqi.net/img/general/600x600/464886155_EZ_eOEe-jRtQE1oZA_89D8qp4yDYpUeKq09rJmTqg80.jpg",
+    "note_moyenne": 4.5,
+    "site_web": "www.restaurant-lemirage.ma"
+  },
+  {
+    "id": 10,
+    "nom": "Délices du Maroc",
+    "adresse": "Rue Salah Eddine El Ayoubi, Tanger 90000",
+    "telephone": "+212 5 39 94 33 22",
+    "email": "info@delicesdumaroc.ma",
+    "type_cuisine": "Cuisine marocaine raffinée",
+    "photo": "https://tb-static.uber.com/prod/image-proc/processed_images/d3cf284f1abbe82266f366a81b204fa1/fb86662148be855d931b37d6c1e5fcbe.jpeg",
+    "note_moyenne": 4.7,
+    "site_web": "www.delicesdumaroc.com"
+  },
+  {
+    "id": 11,
+    "nom": "Restaurant Le Comptoir",
+    "adresse": "Avenue Mohammed VI, Tanger 90000",
+    "telephone": "+212 5 39 32 44 55",
+    "email": "contact@lecomptoir.ma",
+    "type_cuisine": "Cuisine française",
+    "photo": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/da/ff/8c/dinner-at-alma.jpg?w=400&h=-1&s=1",
+    "note_moyenne": 4.4,
+    "site_web": "www.lecomptoir-tanger.ma"
+  },
+  {
+    "id": 12,
+    "nom": "Palais des Délices",
+    "adresse": "Rue Ibn Toumert, Tanger 90000",
+    "telephone": "+212 5 39 93 66 77",
+    "email": "reservation@palaisdesdelices.ma",
+    "type_cuisine": "Cuisine orientale",
+    "photo": "https://img.restaurantguru.com/rce7-logo-Palais-Des-Delices-Chick-N-Crepes.jpg",
+    "note_moyenne": 4.6,
+    "site_web": null
+  },
+  {
+    "id": 13,
+    "nom": "La Table du Pêcheur",
+    "adresse": "Port de Tanger, Tanger 90000",
+    "telephone": "+212 5 39 94 22 11",
+    "email": "contact@latabledupecheur.ma",
+    "type_cuisine": "Fruits de mer et grillades",
+    "photo": "https://img.restaurantguru.com/w550/h367/r0a5-Le-Pecheur-Restaurant-Tanger-food.jpg",
+    "note_moyenne": 4.8,
+    "site_web": "www.latabledupecheur.ma"
+  },
+  {
+    "id": 14,
+    "nom": "Fairmont Tazi Palace",
+    "adresse": "Place de France, Tanger 90000",
+    "telephone": "+212 5 39 32 55 66",
+    "email": "reservation@lerif.ma",
+    "type_cuisine": "Cuisine traditionnelle rifaine",
+    "photo": "https://dq5r178u4t83b.cloudfront.net/wp-content/uploads/sites/186/2022/10/09140854/261_FairmontTazi_040123_7471_HD_RomeoBalancourt1.jpg",
+    "note_moyenne": 4.5,
+    "site_web": null
+  },
+  {
+    "id": 15,
+    "nom": "Cuisine de la Mer",
+    "adresse": "Boulevard Moulay Rachid, Tanger 90000",
+    "telephone": "+212 5 39 94 11 22",
+    "email": "info@cuisinedelamer.ma",
+    "type_cuisine": "Poissons et fruits de mer",
+    "photo": "https://bonsplansmaroc.com/wp-content/uploads/2021/11/conception-site-monopage-2022-Recupere-2.jpg",
+    "note_moyenne": 4.7,
+    "site_web": "www.cuisinedelamer.com"
+  },
+  {
+    "id": 16,
+    "nom": "Dar Al Maghrebia",
+    "adresse": "Rue de la Liberté, Tanger 90000",
+    "telephone": "+212 5 39 93 10 10",
+    "email": "contact@darmaghrebia.ma",
+    "type_cuisine": "Cuisine Marocaine",
+    "photo": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/e7/1d/2a/photo1jpg.jpg?w=900&h=500&s=1",
+    "note_moyenne": 4.8,
+    "site_web": "www.darmaghrebia.com"
+  }
+]
