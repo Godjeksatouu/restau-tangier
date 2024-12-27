@@ -58,9 +58,9 @@ document.addEventListener("DOMContentLoaded", () => {
         <td><button class="details-btn" data-id="${
           restaurant.id
         }">Détails</button></td>
-        <td><button class="delete-btn" data-id="${
+        <td><button class="delete-btn" onclick="deleteData(${
           restaurant.id
-        }">Delete</button></td>
+        })" data-id="${restaurant.id}">Delete</button></td>
       `;
 
       tableBody.appendChild(row);
@@ -139,25 +139,26 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-  // Function to delete data (using DELETE method)
-  async function deleteData(id) {
-    try {
-      const response = await fetch(
-        `http://localhost:3000/api/restaurants/${id}`,
-        {
-          method: "DELETE",
-        }
-      );
-
-      if (response.ok) {
-        console.log("Data deleted successfully!");
-      } else {
-        console.error("Failed to delete data.");
-      }
-    } catch (error) {
-      console.error("Error:", error);
-    }
-  }
-
   initialize();
 });
+
+// Function to delete data (using DELETE method)
+async function deleteData(id) {
+  try {
+    const response = await fetch(
+      `http://localhost:3000/api/restaurants/${id}`,
+      {
+        method: "DELETE",
+      }
+    );
+    initialize();
+
+    if (response.ok) {
+      console.log("Data deleted successfully!");
+    } else {
+      console.error("Failed to delete data.");
+    }
+  } catch (error) {
+    console.error("Error:", error);
+  }
+}
