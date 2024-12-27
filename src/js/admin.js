@@ -28,37 +28,61 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Function to display restaurants
   function displayRestaurants(restaurants) {
-    container.innerHTML = ""; // Clear current restaurant cards
+    // Clear current table content
+    container.innerHTML = "";
+
+    // Create the table and header
+    const table = document.createElement("table");
+    table.classList.add("restaurants-table");
+
+    const headerRow = `
+      <thead>
+        <tr>
+          <th>Photo</th>
+          <th>Nom</th>
+          <th>Type de Cuisine</th>
+          <th>Adresse</th>
+          <th>Note Moyenne</th>
+          <th>Action</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+    `;
+    table.innerHTML = headerRow;
+
+    // Add rows for each restaurant
+    const tableBody = document.createElement("tbody");
 
     restaurants.forEach((restaurant) => {
-      const card = document.createElement("div");
-      card.classList.add("restaurant-card");
-      card.innerHTML = `
-        <div class="card-image-container">
-          <img src="${restaurant.photo}" alt="${restaurant.nom}">
-        </div>
-        <div class="card-content">
-          <h3>${restaurant.nom}</h3>
-          <p class="cuisine-type">${restaurant.type_cuisine}</p>
-          <p class="address">${restaurant.adresse}</p>
-          <div class="card-footer">
-            <span class="rating">★ ${restaurant.note_moyenne.toFixed(
-              1
-            )}/5</span>
-            <button class="details-btn" data-id="${
-              restaurant.id
-            }">Détails</button>
-          </div>
-        </div>
+      const row = document.createElement("tr");
+
+      row.innerHTML = `
+        <td><img src="${restaurant.photo}" alt="${
+        restaurant.nom
+      }" class="restaurant-photo"></td>
+        <td>${restaurant.nom}</td>
+        <td>${restaurant.type_cuisine}</td>
+        <td>${restaurant.adresse}</td>
+        <td>★ ${restaurant.note_moyenne.toFixed(1)}/5</td>
+        <td><button class="details-btn" data-id="${
+          restaurant.id
+        }">Détails</button></td>
+        <td><button class="delete-btn" data-id="${
+          restaurant.id
+        }">Delete</button></td>
       `;
 
-      container.appendChild(card);
+      tableBody.appendChild(row);
 
-      const detailsButton = card.querySelector(".details-btn");
+      // Add click event to the details button
+      const detailsButton = row.querySelector(".details-btn");
       detailsButton.addEventListener("click", () => {
         redirectToDetailsPage(restaurant.id);
       });
     });
+
+    table.appendChild(tableBody);
+    container.appendChild(table); // Append the table to the container
   }
 
   // Function to redirect to the restaurant details page
