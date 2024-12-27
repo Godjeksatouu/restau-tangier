@@ -47,40 +47,40 @@
     </div>
     <div id="Ajouter" class="containerr">
       <div class="text">Ajouter un Nouveau Restaurant</div>
-      <form action="#">
+      <form action="#" id="restaurant-form">
         <div class="form-row">
           <div class="input-data">
-            <input type="text" name="nom"  required>
+            <input type="text" name="nom" id="nom"  required>
             <label for="">Nom</label>
           </div>
           <div class="input-data">
-            <input type="text" name="adresse"  required>
+            <input type="text" name="adresse" id="adresse"  required>
             <label for="">Adresse</label>
           </div>
         </div>
         <div class="form-row">
           <div class="input-data">
-            <input type="text" name="telephone"  required />
+            <input type="text" name="telephone" id="telephone" required />
             <label for="">Telephone</label>
           </div>
           <div class="input-data">
-            <input type="email" name="email"  required />
+            <input type="email" name="email" id="email"  required />
             <label for="">Email</label>
           </div>
         </div>
         <div class="form-row">
           <div class="input-data">
-            <input type="text" name="type_cuisine"  required>
+            <input type="text" name="type_cuisine" id="type_cuisine" required>
             <label for="">Type de Cuisine</label>
           </div>
           <div class="input-data">
-            <input type="number" step="0.1" name="note_moyenne"  required>
+            <input type="number" step="0.1" name="note_moyenne" id="note_moyenne" required>
             <label for="">Note Moyenne</label>
           </div>
         </div>
         <div class="form-row">
           <div class="input-data">
-            <input type="text" name="siteweb" required />
+            <input type="text" name="siteweb" id="siteweb" required />
             <label for="">Site Web</label>
           </div>
           <div class="input-data">
@@ -90,6 +90,7 @@
             <input
               class="file-uploader"
               type="file"
+              id="image"
               onchange="upload()"
               accept="image/*"
             />
