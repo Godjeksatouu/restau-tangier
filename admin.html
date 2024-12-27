@@ -89,16 +89,15 @@
             </h1>
             <input
               class="file-uploader"
-              type="file"
+              type="text"
               id="image"
-              onchange="upload()"
-              accept="image/*"
+              placeholder="link image"
             />
           </div>
         </div>
         <div class="form-row submit-btn">
           <div class="input-data">
-            <input type="submit" value="Submit" />
+            <input type="submit" onclick="addData()" value="Submit" />
           </div>
         </div>
       </form>

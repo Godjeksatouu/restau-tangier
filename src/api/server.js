@@ -28,18 +28,10 @@ app.get("/api/restaurants/:id", (req, res) => {
 
 // Add a restaurant
 app.post("/api/restaurants", (req, res) => {
-  const newRestaurant = { id: Date.now(), nom: req.body.nom };
+  const newRestaurant = { id: restaurants.length + 1, ...req.body };
   restaurants.push(newRestaurant);
+  fs.writeFileSync("./restaurants.json", JSON.stringify(restaurants, null, 2));
   res.status(201).json(newRestaurant);
-});
-
-// Update a restaurant
-app.put("/api/restaurants/:id", (req, res) => {
-  const restaurant = restaurants.find((r) => r.id === parseInt(req.params.id));
-  if (!restaurant) return res.status(404).send("Restaurant not found");
-
-  restaurant.nom = req.body.nom;
-  res.json(restaurant);
 });
 
 // Delete a restaurant
