@@ -105,46 +105,39 @@ document.addEventListener("DOMContentLoaded", () => {
     window.searchRestaurants = () => searchRestaurants(restaurants);
   }
 
-  async function addData() {
-    const nom = document.getElementById("nom").value;
-    const type_cuisine = document.getElementById("type_cuisine").value;
-    const telephone = document.getElementById("telephone").value;
-    const adresse = document.getElementById("adresse").value;
-    const photo = document.getElementById("image").value;
-    const email = document.getElementById("email").value;
-    const site_web = document.getElementById("siteweb").value;
-    const note_moyenne = document.getElementById("note_moyenne").value;
+  document
+    .getElementById("restaurant-form")
+    .addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const data = {
+        nom: document.getElementById("nom").value,
+        type_cuisine: document.getElementById("type_cuisine").value,
+        telephone: document.getElementById("telephone").value,
+        adresse: document.getElementById("adresse").value,
+        photo: document.getElementById("image").value,
+        email: document.getElementById("email").value,
+        site_web: document.getElementById("siteweb").value,
+        note_moyenne: parseFloat(document.getElementById("note_moyenne").value),
+      };
 
-    const data = {
-      nom,
-      type_cuisine,
-      telephone,
-      adresse,
-      photo,
-      email,
-      site_web,
-      note_moyenne,
-    };
+      try {
+        const response = await fetch("http://localhost:3000/api/restaurants", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        });
 
-    try {
-      const response = await fetch("http://localhost:3000/api/restaurants", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-
-      if (response.ok) {
-        console.log("Data added successfully!");
-      } else {
-        console.error("Failed to add data.");
+        if (response.ok) {
+          console.log("Data added successfully!");
+        } else {
+          console.error("Failed to add data.");
+        }
+      } catch (error) {
+        console.error("Error:", error);
       }
-    } catch (error) {
-      console.error("Error:", error);
-    }
-  }
-  document.getElementById("restaurant-form").addEventListener(() => {});
+    });
 
   // Function to delete data (using DELETE method)
   async function deleteData(id) {
